@@ -16,6 +16,7 @@ install:
   - node --version
   - npm install
   - pip install blessed==1.9.5
+  - pip install dockerpty>=0.3.2,<0.4
 #  - . installMongo.sh
 #  - cat /etc/mongod.conf
 #  - sudo mongod --smallfiles &
