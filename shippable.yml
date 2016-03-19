@@ -34,3 +34,13 @@ script:
 after_script:
   - ./node_modules/.bin/istanbul cover grunt -- -u tdd
   - ./node_modules/.bin/istanbul report cobertura --dir  shippable/codecoverage/
+
+integrations:
+  deploy:
+    - integrationName: "aws"
+      type: aws
+      target: eb_paas
+      platform: "Node.js"
+      application_name: sample-node-eb-paas-app
+      env_name: sample-node-eb-paas-env
+      region: us-east-1
